@@ -507,19 +507,27 @@ h2 {
     display: none !important;
 }
 
-/* 1. ¡BIENVENIDOS! - Enmarcado en el letrero de madera superior */
-#step-1 .welcome-tag {
+/* 1. ¡BIENVENIDOS! - Forzado total para tipografía gigante en la madera */
+#step-1 .welcome-tag,
+#step-1 .badge {
     display: inline-block !important;
     background: transparent !important;
     font-family: 'Georgia', serif;
-    font-size: 1.6rem !important; /* Ligeramente más compacto para dar más aire */
+    
+    /* 🛠️ FUERZA EL TAMAÑO GIGANTE */
+    font-size: 2.2rem !important; 
     font-weight: bold !important;
-    color: #f5d6b4 !important; 
+    color: #f5d6b4 !important; /* Tu color crema arena sólido */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    
+    /* 📏 UBICACIÓN CRÍTICA: Lo baja de las hojas de arriba y lo centra en la tabla */
     margin-top: 95px !important; 
     margin-bottom: 0px !important; 
     width: 100%;
+    text-align: center !important;
 }
+
+
 
 /* 2. ¡UNA NUEVA AVENTURA! - Subido para abrir un canal de espacio con el monito */
 #step-1 h1 {
@@ -527,8 +535,8 @@ h2 {
     font-size: 2rem !important; /* Letra más compacta para liberar espacio vertical */
     font-weight: 800 !important; 
     color: #2d1a0e !important;     
-    margin-top: 65px !important; /* 🌟 MÁS ESPACIO: Abre un hueco libre y limpio abajo del monito */
-    margin-bottom: 8px !important; /* 🌟 MÁS ESPACIO: Separa más del bloque 3 */
+    margin-top: 15px !important; /* 🌟 MÁS ESPACIO: Abre un hueco libre y limpio abajo del monito */
+    margin-bottom: 12px !important; /* 🌟 MÁS ESPACIO: Separa más del bloque 3 */
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
     text-transform: none !important;
     letter-spacing: 0.5px !important;
@@ -549,19 +557,28 @@ h2 {
     text-shadow: none !important;
 }
 
-/* 4. ANTES DE ADENTRARNOS... */
-#step-1 .subtitle, #step-1 .safari-subtitle, #step-1 .safari-intro, #step-1 .hide-on-welcome {
+/* 4. ANTES DE ADENTRARNOS... - BLINDAJE ABSOLUTO POR ETIQUETA */
+#step-1 .subtitle, 
+#step-1 .safari-subtitle, 
+#step-1 .safari-intro, 
+#step-1 .hide-on-welcome,
+#step-1 p { /* 🛠️ EL CAMBIO CLAVE: Aplica a cualquier párrafo nativo de la portada */
     display: block !important;
-    font-size: 1.2rem !important; /* Letra fina que libera píxeles de altura */
+    
+    /* 📏 CONTROL DE TAMAÑO GIGANTE CONTROLABILE: */
+    /* Sube este número a 1.8rem o 2rem si en tu monitor lo sigues viendo chico */
+    font-size: 1.2rem !important; 
+    
     font-weight: 700 !important; 
     color: #3b2d24 !important;   
-    margin-top: 2px !important;
-    margin-bottom: 22px !important; /* 🌟 MÁS ESPACIO: Gran separación de aire antes de los inputs */
-    padding: 0 20px !important;
+    margin-top: 8px !important;
+    margin-bottom: 22px !important; 
+    padding: 0 15px !important;
     line-height: 1.3 !important;
     font-family: 'Segoe UI', Roboto, sans-serif !important;
     text-shadow: none !important;
 }
+
 
 /* FORMULARIO - Ubicado en la base de manera desahogada */
 #step-1 .safari-form {
