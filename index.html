@@ -4,43 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Shower - ¡Una Nueva Aventura!</title>
-    <!-- Importamos la fuente cursiva premium desde Google Fonts -->
+    <!-- Carga correcta de fuentes -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
 </head>
-
 <body>
  
-    <!-- Hojas flotantes interactivas en la parte superior -->
+    <!-- Hojas flotantes decorativas balanceándose por detrás -->
     <img src="assets/hoja-izq.png" class="hoja-viento h-top-left" alt="decoración safari">
     <img src="assets/hoja-der.png" class="hoja-viento h-top-right" alt="decoración safari">
 
-    <!-- Reproductor de música invisible en segundo plano -->
     <audio id="safari-music" loop>
         <source src="SONIDOS DE LA JUNGLA RELAJANTES  VIBRAS DE LA SELVA.mp3" type="audio/mpeg">
     </audio>
 
-
     <div class="safari-container">
 
-        <!-- =========================================================================
-           PÁGINA 1: BIENVENIDA Y REGISTRO DE AVENTUREROS
-           ========================================================================= -->
+        <!-- PÁGINA 1: BIENVENIDA -->
         <section id="step-1" class="step-section active">
-            <div class="card">
-                <!-- Busca esta línea en tu index.html y déjala así -->
-                <span class="badge welcome-tag">¡Bienvenidos!</span>
-
-                <h1>¡Una Nueva Aventura!</h1>
-                <p class="subtitle">Acompáñanos a descubrir una gran sorpresa en la selva.</p>
-                
-                <!-- Reemplaza src con la ruta de tu imagen de portada safari -->
-                <img src="assets/image_5de1604a (1).png" alt="Animalitos Safari" class="hero-img">
-                
-                <p>Antes de adentrarnos en la espesura del safari, necesitamos registrar a nuestros exploradores:</p>
+            <div class="card card-transparent">
+                <span class="welcome-tag">¡Bienvenidos!</span>
+                <h1 class="safari-title">¡Una Nueva Aventura!</h1>
+                <p class="instruction-text">Antes de adentrarnos en la espesura del safari, necesitamos registrar a nuestros exploradores:</p>
 
                 <form id="form-registro" class="safari-form">
                     <div class="form-group">
@@ -56,22 +44,19 @@
             </div>
         </section>
 
-        <!-- =========================================================================
-           PÁGINA 2: PRIMER DESCUBRIMIENTO (REVELACIÓN DE LUISA)
-           ========================================================================= -->
+        <!-- PÁGINA 2: JUEGO 1 (LUISA) -->
         <section id="step-2" class="step-section">
-            <div class="card">
+            <div class="card card-transparent">
                 <h2>¡Primer Descubrimiento!</h2>
-                <p>Hay un misterioso nido oculto. Toca el arbusto repetidamente para ver qué hay dentro:</p>
+                <p class="bush-instruction">Hay un misterioso nido oculto. Toca el arbusto repetidamente para ver qué hay dentro:</p>
                 
                 <div id="bush-game" class="bush-container">
-                    <!-- Reemplaza src con la ruta de tu imagen de un arbusto o follaje -->
                     <img src="assets/arbusto.png" id="bush-img" alt="Arbusto Safari">
-                    <div id="reveal-sex-1" class="hidden-result hidden">¡Es una Niña! 🌸</div>
                 </div>
+                <div id="reveal-sex-1" class="hidden-result hidden">¡Es una Niña! 🌸</div>
 
                 <div id="name-game-1" class="name-game hidden">
-                    <p class="small-text">¡Es una hermosa pequeña! Descubre su nombre seleccionando las letras correctas:</p>
+                    <p class="small-text-game">¡Es una hermosa pequeña! Descubre su nombre:</p>
                     <div id="word-display" class="word-slots"></div>
                     <div id="keyboard" class="safari-keyboard"></div>
                 </div>
@@ -80,37 +65,76 @@
             </div>
         </section>
 
-        <!-- =========================================================================
-           PÁGINA 3: EL GIRO DE TRAMA (SORPRESA MELLIZAS)
-           Nota: El contenido de esta sección se genera dinámicamente por JavaScript
-           para activar los efectos de temblor en pantalla.
-           ========================================================================= -->
+        <!-- PÁGINA 3: GIRO DE TRAMA ESTÁTICO -->
         <section id="step-3" class="step-section">
-            <!-- Renderizado dinámico desde script.js -->
+            <div id="twist-container" class="card card-editorial">
+                <div class="animate-earthquake">
+                    <h2>¡ESPERA UN MOMENTO! ⚠️</h2>
+                    <p style="font-weight: bold; margin: 10px 0; background-color: rgba(255,255,255,0.7); padding: 8px; border-radius: 8px;">¿Escuchaste eso? Un fuerte rugido sacude las hojas de la selva...</p>
+                    <div style="font-size:2.3rem; margin: 10px 0;">🍃🦁🍃</div>
+                    <p style="background-color: rgba(255,255,255,0.7); padding: 8px; border-radius: 8px; margin-bottom: 10px;">¡Hay otro nido oculto! Al parecer no estaba vacío...</p>
+                    <button id="btn-to-baby2" class="btn-safari">Investigar el rugido 🔍</button>
+                </div>
+            </div>
         </section>
 
-        <!-- =========================================================================
-           PÁGINA 4: SEGUNDO DESCUBRIMIENTO (REVELACIÓN DE MARTA)
-           Nota: El minijuego de la sopa de letras se inyecta dinámicamente por JS.
-           ========================================================================= -->
+        <!-- PÁGINA 4: JUEGO 2 (MARTA) ESTÁTICO -->
         <section id="step-4" class="step-section">
-            <!-- Renderizado dinámico desde script.js -->
+            <div id="soup-container" class="card card-editorial">
+                <h2>¡EL SEGUNDO MILAGRO! 🌸</h2>
+                <p class="highlight-girl">¡SÍ, SON MELLIZAS! ¡OTRA NIÑA! 🦒</p>
+                
+                <div class="word-search-grid">
+                    <span>J</span><span>I</span><span>R</span><span>A</span><span>F</span>
+                    <span>S</span><span>A</span><span>F</span><span>A</span><span>R</span>
+                    <span class="select-target" data-char="M">M</span>
+                    <span class="select-target" data-char="A">A</span>
+                    <span class="select-target" data-char="R">R</span>
+                    <span class="select-target" data-char="T">T</span>
+                    <span class="select-target" data-char="A">A</span>
+                    <span>L</span><span>E</span><span>O</span><span>N</span><span>E</span>
+                    <span>S</span><span>E</span><span>L</span><span>V</span><span>A</span>
+                </div>
+                
+                <button id="btn-to-final" class="btn-safari hidden" style="margin-top: 5px !important;">Ver invitación final 🗺️</button>
+            </div>
         </section>
 
-        <!-- =========================================================================
-           PÁGINA 5: INVITACIÓN FINAL Y RSVP WHATSAPP
-           Nota: Los datos finales y el enlace personalizado de WhatsApp
-           se inyectan de forma dinámica basándose en los datos recolectados.
-           ========================================================================= -->
+        <!-- PÁGINA 5: INVITACIÓN FINAL ESTÁTICA -->
         <section id="step-5" class="step-section">
-            <!-- Renderizado dinámico desde script.js -->
+            <div id="final-container" class="card card-editorial">
+                <span class="badge" style="background: rgba(226, 149, 120, 0.15); color: var(--rosa-fuerte); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">¡Estás Invitado!</span>
+                <h1 style="font-size: 1.8rem; margin-top: 5px;">Baby Shower</h1>
+                <div class="girl-name-style">Luisa & Marta</div>
+                
+                <div class="calendar-display">
+                    <div class="calendar-month">JUNIO</div>
+                    <div class="calendar-row">
+                        <div class="calendar-side-box">SÁBADO</div>
+                        <div class="calendar-day-number">29</div>
+                        <div class="calendar-side-box">4:30 P.M.</div>
+                    </div>
+                    <div class="calendar-year">2026</div>
+                </div>
+
+                <div class="event-details">
+                    <p><strong>📍 Lugar:</strong> Jardín Los Girasoles, Calle Selva #123</p>
+                </div>
+
+                <div class="rsvp-box" style="background: #fdfbf7; padding: 8px; margin: 8px 0;">
+                    <p>Pase para: <strong id="final-guest-name">Explorador</strong></p>
+                    <p>Asistentes: <strong id="final-guest-count">0</strong></p>
+                </div>
+
+                <a href="#" id="final-whatsapp-link" target="_blank" class="btn-safari" style="background-color: #25d366 !important; color: white !important; margin-top: 5px;">
+                    Confirmar por WhatsApp 💬
+                </a>
+            </div>
         </section>
 
     </div>
-       <!-- 1. Importamos la librería de confeti primero -->
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-    
-    <!-- 2. Tu archivo de control va abajo -->
+    <!-- SOLUCIÓN: Cargamos la librería oficial de internet de forma segura -->
+<!--     <script src="https://jsdelivr.net"></script> -->
     <script src="script.js"></script>
 </body>
 </html>
